@@ -1,0 +1,32 @@
+<ion-view view-title="<h4>Songs / Artist</h4>">
+  <ion-content class="padding" >
+
+    <div  ng-if = " chats.length != 0 ">
+    <ion-list ng-repeat="chat in chats">
+
+    <ion-item ng-if="(chat | myFormat).kind  != 'song' "  class="item-remove-animate item-avatar item-icon-right"  type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+
+        <img ng-src="{{chat.artworkUrl60 }}">
+        <h2>{{chat.trackName }}</h2>
+        <p>  <h3>{{chat.artistName }}</h3></p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+
+      </ion-item>
+
+    </ion-list>
+  </div>
+
+  <div  class="visiblex" ng-if = " chats.length == 0 ">
+    
+     <h4 class="search-text">No Results</h4>
+     <h5 class="search-text" ng-if= "choice == '' ">We didn't turn up any audio results for "{{search}}"</h5>
+     <h5 class="search-text" ng-if= "choice != '' ">We didn't turn up any video results for "{{search}}"</h5>
+     <h5 class="search-text">Try something else</h5>
+
+  </div>
+  </ion-content>
+</ion-view>

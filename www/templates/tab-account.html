@@ -1,0 +1,73 @@
+<ion-view  view-title="<h4>Settings</h4>">
+  <ion-content class="padding">
+    <div  ng-controller='AccountCtrl' >
+      <div >
+          <li class="item item-toggle">
+            Audio
+            <label class="toggle toggle-balanced">
+              <input  type="radio" ng-model="choice" ng-value="''" ng-change="updateChoice()" >
+              <div class="track">
+                <div class="handle"></div>
+              </div>
+            </label>
+          </li>
+                <li class="item item-toggle">
+                   Video
+                   <label class="toggle toggle-assertive">
+
+                    <input type="radio" ng-model="choice" ng-value="'&entity=musicVideo'" ng-change="updateChoice()">
+                     <div class="track">
+                       <div class="handle"></div>
+                     </div>
+                   </label>
+                 </li>
+
+             <fieldset class="field">
+               <legend >
+                 <h5 class="positive"> Select limit of songs / videos</h5>
+               </legend>
+
+
+           <div class="row">
+               <div class="col col-67">
+
+               <label class="item item-input item-select">
+                 <div class="input-label">
+                   Limit
+                 </div>
+                 <select ng-model="limit" ng-change="updateLimit()">
+                   <option >1</option>
+                   <option >3</option>
+                   <option >5</option>
+                   <option >10</option>
+                   <option >25</option>
+                   <option >50</option>
+                   <option >100</option>
+                 </select>
+               </label>
+            </div>
+         <div class="col col-33">
+         <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+           <input type="text" size="3" ng-model="limit" placeholder="#" ng-change="updateLimit()">
+       </label>
+       </div>
+    </div>
+  </div>
+<div class="row">
+ <div class="col col-100">
+  <div class="item range range-positive">
+    <i class="icon ion-ios-paw-outline"> <ion-label><small>min<br />1</small></ion-label></i>
+    <input type="range" ng-model="limit" name="volume" min="1" max="100" value="5" ng-change="updateLimit()">
+    <i class="icon ion-ios-paw"><ion-label><small>max<br />100</small></ion-label></i>
+  </div>
+  </div>
+</div>
+</fieldset>
+ </div>
+</div>
+
+
+
+</ion-content>
+</ion-view>

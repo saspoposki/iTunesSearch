@@ -1,0 +1,15 @@
+<ion-view view-title ='<h4><i class="ion-headphone"></i>   iTunes Search</h4>'>
+<ion-content class="padding" >
+    <div  ng-controller='DashCtrl' >
+   <h5 >Artist or Song:</h5>
+
+  <div class="item item-input-inset">
+    <label class="item-input-wrapper">
+       <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" ng-model="category" placeholder="Search artist or song" ng-change="updateCategory()" class="bg_input">
+    </label>
+   <a id="btn-submit" class="button" ng-click="makeCall()" href="#/tab/chats">Submit</a>
+  </div>
+   </div>
+  </ion-content>
+</ion-view>

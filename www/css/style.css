@@ -1,0 +1,129 @@
+/* Empty. Add your own CSS if you like */
+.frame2, .frame {
+  
+  max-width: 100%;
+
+}
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+ 
+ }
+#spinner{
+  text-align: center;
+  
+}
+ .spinner svg {
+  width: auto !important;
+  height: 85px !important;
+ 
+ }
+.visiblex {
+  margin: auto;
+  margin-top: 100px;
+  width: 50%;
+  text-align: center;
+
+}
+.platform-ios .padding{
+  margin-top : 75px !important;
+
+}
+.platform-android .padding{
+  margin-top : 25px !important;
+
+}
+.search-text{
+  color: grey !important;
+}
+.field {
+  background: white;
+}
+
+.bg_input::-moz-placeholder {
+  color: #07314f;
+  opacity: 0.7;
+}
+
+.bg_input:-ms-input-placeholder {
+  color: #07314f;
+  opacity: 0.7;
+}
+
+.bg_input::-webkit-input-placeholder {
+  text-indent: 0;
+  color: #07314f;
+  opacity: 0.7;
+}
+
+body {
+  color: #07314f;
+}
+
+.button-clear{
+  position: static;
+  margin-top: 10px !important;
+  color: #07314f !important;
+
+
+}
+.bar-positive{
+ 
+  padding-top: calc(constant(safe-area-inset-top) ) ;
+  padding-top: calc(env(safe-area-inset-top)) ;
+  
+}
+#nav-out{
+  position: relative;
+  
+  
+}
+#nav-in-dash, #nav-in-chat, #nav-in-account {
+  position: relative;
+ 
+  margin-top:  calc(constant(safe-area-inset-top)- 20px);
+  margin-top:  calc(env(safe-area-inset-top) - 20px) ;
+}
+
+#btn-submit {
+
+  background-color: rgba(143, 185, 227, 0.3)  !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.tab-item.dash.tab-item-active, .tab-item.dash.active, .tab-item.dash.activated {
+  color: #07314f !important;
+  font-weight: bold;
+  background-color: clear !important;
+}
+
+
+.tab-item {
+  color: #07314f !important;
+  font-weight: bold;
+  /*background-color: #387ef5 !important; calc(env(safe-area-inset-top) -10px )*/
+
+}
+
+.tab-item.activated {
+  color: whitesmoke!important;
+  font-weight: bold;
+  
+  background-color: rgba( 56,	126	,245, 0.3) !important;
+}
+
+.tabs {
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: constant(safe-area-inset-bottom);
+  
+  /*
+  height: calc(constant(safe-area-inset-bottom) + 49px);
+  height: calc(env(safe-area-inset-bottom) + 49px);
+  */
+  
+
+}
+

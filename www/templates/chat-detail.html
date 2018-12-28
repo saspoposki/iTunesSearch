@@ -1,0 +1,66 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view ng-controller="ChatDetailCtrl" view-title="<h4>{{chat.trackName}}</h4>">
+  <ion-content class="padding" >
+    <div class="list card" ng-if = " chat.kind == 'song' ">
+
+  <div class="item item-avatar">
+
+    <img src="{{chat.artworkUrl60}}">
+
+    <h2><b>{{chat.trackName}}</b></h2>
+    <h2>{{chat.artistName}}</h2>
+    <h3>{{chat.collectionName}}</h3>
+
+  </div>
+
+  <div class="item item-body" >
+    <a href="{{chat.trackPreview}}" target="iframe1" >
+      <img class="image" src="{{chat.artworkUrl100}}"></img>
+      </a>
+    <p>
+      <a class="item item-icon-left positive" href="{{chat.trackPreview}}" target="iframe1" >
+        <i class="icon ion-music-note"></i>
+    Start listening
+  </a>
+    </p>
+  </div>
+  
+</div>
+<div  ng-if = " chat.kind == 'music-video' ">
+
+<div class="item item-avatar">
+
+<img src="{{chat.artworkUrl60}}">
+
+<h2><b>{{chat.trackName}}</b></h2>
+<h2>{{chat.artistName}}</h2>
+<h3>{{chat.collectionName}}</h3>
+
+</div>
+
+<div class="item item-body" >
+  <a href="{{chat.trackPreview}}" target="iframe2" >
+    <img class="image" src="{{chat.artworkUrl100}}"></img>
+    </a>
+<p>
+
+  <a class="item item-icon-left positive" href="{{chat.trackPreview}}" target="iframe2" >
+    <i class="icon ion-videocamera"></i>
+Watch Video
+</a>
+</p>
+</div>
+<div >
+<iframe class="frame2" name="iframe2" src="{{chat.trackPreview}}"  width="350" height="200"></iframe>
+  </div>
+</div>
+
+  <iframe class="frame" name="iframe1" src="{{chat.trackPreview}}"  width="350" height="200" ></iframe>
+  
+  </ion-content>
+</ion-view>
